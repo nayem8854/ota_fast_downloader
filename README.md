@@ -8,7 +8,6 @@ A powerful and optimized Bash script designed to download large files (like OTA 
 - 📦 **Auto-Dependency Installer:** Automatically checks, updates, and installs missing packages (`aria2`, `wget`, `detox`, `ripgrep`) on Ubuntu/Colab.
 - 📂 **Custom Save Directory:** Use the `-d` flag to save files directly to Google Drive, external drives, or custom folders.
 - 🔄 **Smart Mirror Selection:** Automatically resolves and selects the fastest mirrors for Xiaomi (`://miui.com`) and Pixeldrain links.
-- ⏸️ **Safe Pause/Stop:** Prompts the user before starting the download, allowing you to stop (`c`) or proceed (`p`).
 
 ## Installation
 
@@ -22,20 +21,10 @@ chmod +x ota_fast_downloader.sh
 
 ## Usage
 
-### 1. Default Download (Saves to `./download_ota`)
+### 1. Default Download (Saves to `download_ota`)
 ```bash
 ./ota_fast_downloader.sh https://example.com
 ```
-
-### 2. Custom Location Download (e.g., Google Drive in Colab)
-```bash
-./ota_fast_downloader.sh -d "drive/MyDrive/ubl_project/" https://example.com
-```
-
-### Controls During Pause
-When running, the script will pause before downloading and ask:
-- Press `p` : To **Continue** downloading.
-- Press `c` : To **Cancel** and stop the script.
 
 ## Requirements
 The script automatically handles the installation of these tools if run with root/sudo privileges:
